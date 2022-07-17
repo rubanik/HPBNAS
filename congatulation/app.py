@@ -92,8 +92,9 @@ def make_a_shot(name:str):
     camera.resolution = (600,400)
     camera.start_preview()
     sleep(1.5)
-    camera.capture(name)
+    camera.capture('/home/pi/Documents/HPBNAS/congratulation/static/'+name)
     camera.stop_preview()
+    camera.close()
 
 
 
