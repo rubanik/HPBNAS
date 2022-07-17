@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" >
+    {{ form.hidden_tag() }}
+    {{ form.name.label }}
+    {{ form.name(class="form-group") }}
+    <!-- {{ form.submit(value='one') }} -->
+    <div class="form-group">
+        <input type ="submit" name="action" value="one">
+        <!-- {{ form.submit(class="btn", value="one") }} -->
+    </div>
+    <br>
+    {{ form.l_name.label }}
+    {{ form.l_name(class="form-group") }}
+    <!-- {{ form.submit(value='two') }} -->
+    <div class="form-group">
+        <input type ="submit" name="action" value="two">
+        <!-- {{ form.submit(class="btn", value="two") }} -->
+    </div>
+    <br>
+    {{ form.test }}
+        
+</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Настюшка - пердушка</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-1 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4">С днём рождения!</span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="{{url_for('last_gift')}}" class="nav-link active" aria-current="page">В начало!</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+        </header>
+      </div>
+</head>
+<body>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4 rounded-3 shadow-lg" src="./static/sad_kitty_text.png" alt="" width="350">
+        <h1 class="display-5 fw-bold">Хочется верить, что ты довольна и всё хорошо!</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Теперь мы можем двигаться дальше! Но что бы продвинуться вперёд, иногда, приходится вернуться в самое <u> начало</u>!</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Идти дальше</button>
+            <form action="" method="post">
+                {{form.hidden_tag()}}
+                <button type="form-control" class="btn btn-outline-secondary btn-lg px-4">Перечитать опять?</button>
+            </form>
+
+            {% if click %}
+                    <button type="button" class="btn btn-light px-4">Нажимание этих кнопок</button>
+                    <button type="button" class="btn btn-primary px-4">На результат</button>
+                    <button type="button" class="btn btn-success px-4">Не Влияет</button>
+                    <button type="button" class="btn btn-warning px-4">Нужно что-то</button>
+                    <button type="button" class="btn btn-primary px-4">Другое</button>
+                    <button type="button" class="btn btn-danger px-4">Повыше</button>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container col-xl-10 col-xxl-8 px-4">
+    <div class="row align-items-center g-lg-5 py-2">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Столкнуться с врагом лицом к лицу</h1>
+        <p class="col-lg-10 fs-5">Настя, что бы найти первую подсказку и приблизится к своему подарку тебе нужно пройти испытание. Всё что нужно сделать это найти код и ввести его в поле ниже. Код нахидится там, где можно увидеть деда, в то время как он дергает ручку. Обрати внимание, что в случае затруднения ты можешь взять подсказку.</p>
+        <p class="col-lg-10 font-weight-light fs-6"> <i>Особых правил нет! Просто найди код!</i></p>
+        <div class="col-xs-2">
+          <form action="" method="post">
+
+            {# get_flashed_messages() is auto sent to the template with the flash() call #}
+                {% for mess in get_flashed_messages()  %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  {{mess}}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+
+              {{ form_code.hidden_tag() }}
+              {{form_code.secret_key(class="form-control  form-control-xs my-3 ",placeholder="Введи код сюда!",style="width: 230px;")}}
+              {{ form_code.secret_sumbit(class='btn btn-primary')}}
+          </form>
+        </div>
+      </div>
+      
+      <div class="col-md-10 mx-auto col-lg-5">
+        <div class="card" style="width: 350px;">
+            {% if helper %}
+            <img src="./static/OldmanLense.jpg" class="card-img-top" alt="...">
+            {% else %}
+            <img src="./static/Oldman.png" class="card-img-top" alt="...">
+            {% endif %}
+            <div class="card-body text-center">
+                <h5 class="card-title">Дед, дергающий ручку:</h5>
+                <p class="card-text">"Я поздравляю тебя с днём рождения. Я не понимаю кто ты. Может кто-то из интернета. Подёргаю ручку".</p>
+                <!-- <a href="{{url_for('oldman')}}" type="submit" class="btn btn-success">Получить подсказку</a> -->
+              <form action="" method="post">
+                {{form_help.hidden_tag()}}
+                {{form_help.submit(class='btn btn-success')}}
+              </form>
+            
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row align-items-center g-lg-5 py-5">
+            <div class="form-row align-items-center">
+              <div class="form-group mx-auto col-md-3 py-4">
+                {# get_flashed_messages() is auto sent to the template with the flash() call #}
+                {% for mess in get_flashed_messages()  %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  {{mess}}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+             </div>
+            </div>
+              
+    </div> -->
+</div>
+
+{% endblock %}

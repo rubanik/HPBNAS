@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="px-4 pt-2 my-2 text-center border-bottom">
+    <h1 class="display-5 fw-bold">Важный факт!</h1>
+    <h1 class="display-3 fw-bold">Ты лучше всех!</h1>
+    <div class="col-lg-8 mx-auto">
+      <p class="lead mb-6"> Ты - это, конечно, что-то потрясающее! С какой стороны не посмотри. Красива и мила, просто восхитительно готовишь, ещё более прелестно ржёшь вместе со мной. Ещё ты просто супер можешь меня рассмешить! Так, что я вспоминая твои приколюхи улыбаюсь как додя в самых неподходящих местах! <br> В вот эти вон вот глаза я, конечно, влюбился сильно! Поздравить и меня можно так-то, ведь у меня девчуля что надо! Ну а вообще, все это, конечно, только для тебя!  <strong>С днём рождения, my love!</strong> </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <a href="{{url_for('explanation')}}"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3"> Это всё про меня! Далее!</button></a>
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="./static/BeautifulEyes.png" class="img-fluid border rounded-5 shadow-lg mb-7" alt="Example image" width="600" height="400" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

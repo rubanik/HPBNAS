@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-2">
+    <div class="row align-items-center g-lg-5 py-2">
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Инструкция по применению этой открытки!</h1>
+            <p class="lead">Что бы всё получилось хорошо, нужно чётко следовать инструкциям! Кто внимательно читает и выполняет все задания так как написано, тот просто умничка! (и ничего не сломается)</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Ой я всё поняла, я умница!</button>
+            </div>
+          </div>
+      <div class="col-md-10 mx-auto col-lg-5">
+        <div class="d-flex gap-5 justify-content-center">
+            <div class="list-group mx-0 w-auto">
+              <label class="list-group-item d-flex gap-2">
+                <input class="form-check-input flex-shrink-0 fw-bold" type="checkbox" value="" checked>
+                <span>
+                 <strong>Чётко выполняй все инструкции!</strong> 
+                  <small class="d-block text-muted">Ты даже не представляешь, благодаря какой магии это всё работает! Следуй указаниям на 100%</small>
+                </span>
+              </label>
+              <label class="list-group-item d-flex gap-2">
+                <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                <span>
+                <strong>Держи планшет горизонтально!</strong> 
+                  <small class="d-block text-muted">Так всё поместится в экран и будет уэээаай красива</small>
+                </span>
+              </label>
+              <label class="list-group-item d-flex gap-2">
+                <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                <span>
+                <strong>Если раздета, оденься!</strong>
+                  <small class="d-block text-muted">Нам предстоят великие путешестивя!</small>
+                </span>
+              </label>
+              <label class="list-group-item d-flex gap-2">
+                <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+                <span>
+                <strong>Ты всё поняла и готова?</strong>
+                  <small class="d-block text-muted">Поставь галочку и нажми душниле на нос!</small>
+                </span>
+              </label>
+            </div>
+      </div>
+    </div>
+    <div class="row align-items-center g-lg-5 ">
+        <div class="col-md-10 mx-auto col-lg-4">
+            <div class="container px-2">
+                <a href="{{url_for('oldman')}}"><img src="./static/Dushnila.png" class="img-fluid border rounded-5 shadow-lg mb-7" alt="Example image" width="350" height="350" loading="lazy"></a>
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container my-5">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg my-3">
+      <div class="row m-auto align-items-center">
+        <div class="col"><p class="lead display-8 fw-bold" align="center">Настя, пусть все твои желания сбудутся!</p></div>
+        <div class="col"><p class="lead display-8 fw-bold" align="center">Будь самой счастливой, смейся, радуйся и радуй!</p></div>
+        <div class="col"><p class="lead display-8 fw-bold" align="center">Живи без проблем, забот! Ты просто супер!</p></div>
+      </div>
+
+      <div class="col">
+          <img class="rounded-5 img-fluid d-block m-auto pb-4" src="./static/caban.png" alt="" width="300" >
+      </div>
+
+      <div class="col">
+        <img class="rounded-5 img-fluid d-block m-auto pb-4" src="./static/caban.png" alt="" width="300">
+      </div>
+      
+      <div class="col">
+        <img class="rounded-5 img-fluid d-block m-auto pb-4" src="./static/caban.png" alt="" width="300">
+      </div>
+  </div>
+  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg my-3">
+    <div class="col-sm-4" align="center">
+      <p> Настёнка, чтоб не пахнуть как кабанчик, подними с пола бакальчик! </p>
+  </div>
+    <div class="col-sm-4">
+        <img class="rounded-5 img-fluid d-block m-auto pb-4" src="./static/final_caban.png" alt="" width="300" >
+    </div>
+    <div class="col-sm-3  text-center">
+        <a href="{{url_for('nerungra')}}">
+          <button type="button" align="center" class="btn btn-warning btn-lg px-4 me-md-2 fw-bold ">Нашла!</button>
+        </a>
+
+      </div>
+    <div class="row">
+      <div class="col text-centred">
+        <p align="center"><i> Ищем ищем...</i></p>
+      </div>
+    </div>
+</div>
+</div>
+{% endblock %} 
+

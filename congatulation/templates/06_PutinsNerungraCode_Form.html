@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Настюшка - пердушка</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-1 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4">С днём рождения!</span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="{{url_for('congrats_one')}}" class="nav-link active" aria-current="page">В начало!</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+        </header>
+      </div>
+</head>
+<body>
+
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">Настенька, ты просто супер!</h1>
+            <p class="col-lg-10 fs-4">Я не устану это повторять! <br> Следующую подсказку можно найти в прекрасном городе, который находится под присмотром Путина, распологается между Белградом и Импилахти, недалеко от мыса Бизюмия! </p>
+          </div>
+
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-light", method="POST">
+            {{form.hidden_tag()}}
+              <div class="form-floating mb-3">
+                {{form.username(class='form-control')}}
+                <label for="floatingInput">{{form.username.label}}</label>
+              </div>
+              <div class="form-floating mb-3">
+                {{form.password(class = "form-control")}}
+                <label for="floatingPassword">{{form.password.label}}</label>
+              </div>
+              {{form.submit(class="w-100 btn btn-lg btn-primary")}}
+              <hr class="my-4">
+              <small class="text-muted">Введи сюда то шо нашла! И ты приблизашься к следующему подарку! А если запукалась, ссылка тебе поможет!</small>
+            </form>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>

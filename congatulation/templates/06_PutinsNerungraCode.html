@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Настюшка - пердушка</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-1 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4">С днём рождения!</span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="{{url_for('congrats_one')}}" class="nav-link active" aria-current="page">В начало!</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+        </header>
+      </div>
+</head>
+<body>
+
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      {% if key_two %}
+          <div class="row align-items-center g-lg-5 py-1">  
+                   
+                    <div class="col-md-10 mx-auto col-lg-5">
+                        <div class="card" style="width: 35rem;">
+                            <img class="card-img-top" src="./static/without_box.png" alt="Card image cap">
+                            <div class="card-body">
+                            <p class="card-text">Отвлекалка:<br> Знай, что ты красива, нежна и прекрасна! чмек!</p>
+                            </div>
+                        </div>
+                    </div>
+          <div class="row align-items-center g-lg-10 py-1">  
+                    <div class="col-lg-8 text-center text-lg-start">
+                        <h1 class="display-4 fw-bold lh-1 mb-3">My love!</h1>
+                        <p class="col-lg-10 fs-5"> 
+                           Теперь, прояви всю свою внимательность и найди 1 отличие между тем что ты видишь тут и в жизни! Как только найдёшь, то нажимай на кнопку и беги смотреть!</p>
+                    </div>
+                    <div class="col-lg-3 text-center ">
+                        <a href="{{url_for('warm_words')}}">
+                            <button type="button" align="center" class="btn btn-warning btn-lg px-4 me-md-2 fw-bold ">Нашла! Я нашла!</button>
+                        </a>
+                    </div>
+           </div>
+          </div>
+            {% else %}
+            <div class="row align-items-center g-lg-10 py-1">  
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold lh-1 mb-3">My love!</h1>
+                    <p class="col-lg-10 fs-5"> 
+                        Следующее задание непростое. И требует внимательности! <br> 
+                        Зелезай на кровать с планшетом, вставай посередине и повернись к шкафу лицом. Дверцы должны быть открыты - иначе ты не увидишь знаки!  <br> 
+                        Как будешь на позиции нажимай на кнопку!</p>
+                </div>
+                <div class="col-lg-3 text-center ">
+                    <form method="post">
+                        {{form.hidden_tag()}}
+                        <button type="form-vontrol" align="center" class="btn btn-success btn-lg px-4 me-md-2 fw-bold ">Я на позиции!</button>
+                      </form>
+                </div>
+            </div>
+            </div>
+            {% endif %}
+        </div>
+      </div>
+
+</body>
+</html>

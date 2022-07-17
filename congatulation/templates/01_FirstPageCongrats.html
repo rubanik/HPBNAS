@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="px-4   text-center">
+    <img class="shadow p-2 d-block mx-auto mb-4 rounded-5 " src="./static/FirstFace.png" alt="" width="370" height="400">
+    <h1 class="display-6 fw-bold">У Настюшки сегодня день рождения!</h1>
+    <div class="col-lg-7 mx-auto">
+      <p class="lead mb-2">А это значит, что сегодня замечательный день! Он лучше многих других тем, что в этот день вселенная (Флора-Фауна) подарила этому миру прекрасного человека - Тебя! И со всей радостью и огромным удовольствием я поздравляю тебя в твоим днём! Ура!</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="{{url_for('congrats_two')}}"><button type="button" action="{{url_for('congrats_two')}}" class="btn btn-primary btn-lg px-4 gap-3"> Дальше хочу!</button></a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

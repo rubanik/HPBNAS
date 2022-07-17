@@ -1,0 +1,14 @@
+TO DO:
+
+1. Сформировать структуру папок и темплейтов.
+    .01_FirstPageCongrats.html
+    .02_SecondPageCongrats.html
+    .03_Explanation.html
+    .04_OldmanQuestion.html
+    .05_ParfumeGiftMission.html
+    .05_1_ParfumeGiftMission.html
+    .06_PutinsNerungraCode.htmls
+    .07_SheFindFirstGift.html
+    .08_AnotherWarmWords.html
+    .09_OpenTheDoorAndLook.html
+    
