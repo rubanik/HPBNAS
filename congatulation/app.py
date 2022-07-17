@@ -5,6 +5,7 @@ from requests import session
 from wtforms import DecimalField,SubmitField, StringField, PasswordField
 
 FIRST_SECRET_CODE = 19940719
+RUNNISG_ON_PI = False
 NERUNGRA_NAME = 'Настюша'
 NERUNGRA_PASS = 'mylove'
 
@@ -70,12 +71,30 @@ def parfume():
 
     # TODO: Логика срабатывания камеры и сохранение файла в папку Static
 
+    if RUNNISG_ON_PI:
+        make_a_shot('shot_one.jpg')
+
     if form_sign.validate_on_submit():
         sign_detected = True
         return render_template('05_ParfumeGiftMission.html', 
                                 form_sign=form_sign, sign_detected=sign_detected)
     return render_template('05_ParfumeGiftMission.html', 
                                 form_sign=form_sign, sign_detected=sign_detected)
+
+
+def make_a_shot(name:str):
+
+    from time import sleep
+    from picamera import PiCamera
+
+    camera = PiCamera()
+    camera.rotation = 180
+    camera.resolution = (600,400)
+    camera.start_preview()
+    sleep(1.5)
+    camera.capture('./static/'+ name)
+
+
 
 
 @app.route('/caban_party')
@@ -106,7 +125,10 @@ def nerungra_next():
     key_two = False
 
     if form.validate_on_submit():
-        print("in form_two")
+
+        if RUNNISG_ON_PI:
+            make_a_shot('shot_two.jpg')
+
         key_two = True
         return render_template('06_PutinsNerungraCode.html',form=form,key_two=key_two)
     
