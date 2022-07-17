@@ -71,10 +71,12 @@ def parfume():
 
     # TODO: Логика срабатывания камеры и сохранение файла в папку Static
 
-    if RUNNISG_ON_PI:
-        make_a_shot('shot_one.jpg')
+
 
     if form_sign.validate_on_submit():
+        if RUNNISG_ON_PI:
+            make_a_shot('shot_one.jpg')
+            
         sign_detected = True
         return render_template('05_ParfumeGiftMission.html', 
                                 form_sign=form_sign, sign_detected=sign_detected)
