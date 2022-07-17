@@ -93,6 +93,7 @@ def make_a_shot(name:str):
     camera.start_preview()
     sleep(1.5)
     camera.capture(name)
+    camera.stop_preview()
 
 
 
