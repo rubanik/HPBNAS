@@ -69,10 +69,6 @@ def parfume():
     sign_detected = False
     form_sign = Submit()
 
-    # TODO: Логика срабатывания камеры и сохранение файла в папку Static
-
-
-
     if form_sign.validate_on_submit():
         if RUNNISG_ON_PI:
             make_a_shot('shot_one.jpg')
@@ -93,7 +89,7 @@ def make_a_shot(name:str):
     camera.rotation = 180
     camera.resolution = (600,400)
     camera.start_preview()
-    sleep(1.5)
+    sleep(0.5)
     camera.capture('/home/pi/Documents/HPBNAS/congratulation/static/'+name)
     camera.stop_preview()
     camera.close()
