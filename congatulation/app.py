@@ -5,7 +5,7 @@ from requests import session
 from wtforms import DecimalField,SubmitField, StringField, PasswordField
 
 FIRST_SECRET_CODE = 19940719
-RUNNISG_ON_PI = True
+RUNNISG_ON_PI = False
 NERUNGRA_NAME = 'Настюша'
 NERUNGRA_PASS = 'mylove'
 

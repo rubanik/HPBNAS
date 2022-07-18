@@ -2,21 +2,22 @@
 {% block content %}
 
 <div class="container my-5">
+  {% if not sign_detected %}
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg my-3">
-      <div class="col-lg-8 p-3 p-lg-5 pt-lg-3">
-        <h1 class="display-5 fw-bold lh-1">Отлично. Идём дальше.</h1>
-        <p class="lead display-8" >
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-6 fw-bold lh-1">Отлично. Идём дальше.</h1>
+        <p class="lead display-10" >
             Теперь, нужно внимательно читать, и выполнять инструкции!
         <br>Вместе с планшетом иди в комнату(если ты ещё не там), включи свет.
         <br>Потом открой шкаф, обе дверцы. Следай шаг назад... Посмотри какой порядок я навёл в своих вещах!(а может и не успел!)
-        <br>Но задача другая. Приглядись, где то есть знак! <strong>Если увидела знак, сразу нажми на кнопку!</strong> 
+        <br>Но задача другая. Приглядись, где то есть знак! <u><strong>Если увидела знак, сразу нажми на кнопку!</strong></u> 
             И посмотри на шкаф! Кое-что произойдет!     
         </p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
           <form action="" method="post">
           {{ form_sign.hidden_tag() }}
           <!-- {{ form_sign.submit(class="btn btn-warning btn-lg px-4 me-md-2 fw-bold") }} -->
-          <button type="form-control" class="btn btn-warning btn-lg px-4 me-md-2 fw-bold">Я увидела занак! Нажимаю!</button>
+          <button type="form-control" class="btn btn-warning btn-lg px-4 me-md-2 fw-bold">Я увидела знак! Нажимаю!</button>
         </form>
         </div>
       </div>
@@ -24,7 +25,7 @@
         <img class="rounded-5" src="./static/wardrobe.png" alt="" width="325" >
     </div>
     </div>
-    {% if sign_detected %}
+    {% else %}
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg my-3">
       <!-- <div class="col-lg-8 p-3 p-lg-5 pt-lg-3">
         <h1 class="display-4 fw-bold lh-1">Отлично. Идём дальше.</h1>
