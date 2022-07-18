@@ -5,7 +5,7 @@ from requests import session
 from wtforms import DecimalField,SubmitField, StringField, PasswordField
 
 FIRST_SECRET_CODE = 19940719
-RUNNISG_ON_PI = False
+RUNNISG_ON_PI = True
 NERUNGRA_NAME = 'Настюша'
 NERUNGRA_PASS = 'mylove'
 
@@ -90,7 +90,7 @@ def make_a_shot(name:str):
     camera.resolution = (600,400)
     camera.start_preview()
     sleep(0.5)
-    camera.capture('/home/pi/Documents/HPBNAS/congratulation/static/'+name)
+    camera.capture('/home/pi/Documents/HPBNAS/congatulation/static/'+name)
     camera.stop_preview()
     camera.close()
 
