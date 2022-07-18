@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container col-xl-10 col-xxl-8 px-4 py-2">
-    <div class="row align-items-center g-lg-5 py-2">
+<div class="container col-xl-10 col-xxl-8 px-4 ">
+    <div class="row align-items-center g-lg-6 py-2">
         <div class="col-lg-6">
             <h1 class="display-5 fw-bold lh-1 mb-3">Инструкция по применению этой открытки!</h1>
             <p class="lead">Что бы всё получилось хорошо, нужно чётко следовать инструкциям! Кто внимательно читает и выполняет все задания так как написано, тот просто умничка! (и ничего не сломается)</p>
@@ -35,6 +35,13 @@
                 </span>
               </label>
               <label class="list-group-item d-flex gap-2">
+                <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                <span>
+                <strong>Не кликай дважды!</strong>
+                  <small class="d-block text-muted">Одного раза достаточно 1️⃣</small>
+                </span>
+              </label>
+              <label class="list-group-item d-flex gap-2">
                 <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
                 <span>
                 <strong>Ты всё поняла и готова?</strong>
@@ -44,7 +51,7 @@
             </div>
       </div>
     </div>
-    <div class="row align-items-center g-lg-5 ">
+    <div class="row align-items-center g-lg-3 ">
         <div class="col-md-10 mx-auto col-lg-4">
             <div class="container px-2">
                 <a href="{{url_for('oldman')}}"><img src="./static/Dushnila.png" class="img-fluid border rounded-5 shadow-lg mb-7" alt="Example image" width="350" height="350" loading="lazy"></a>
